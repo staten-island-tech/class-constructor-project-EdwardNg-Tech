@@ -33,14 +33,15 @@ class eventListeners {
             );
             if (userInput.nane === '' || userInput.artist === '' || userInput.year === '' || userInput.genre === '' || userInput.link === '') {
                 alert('Error: Please enter a value for every field.');
+                event.preventDefault();
             } else if (Number.isNaN(parseInt(userInput.year))) {
                 alert('Error: Please enter a number for the year field.');
+                event.preventDefault();
             } else {
                 let userDisplay = new userInterface;
                 userDisplay.display(userInput);
                 event.preventDefault();
                 userDisplay.removeFields();
-                
             }
         });
     }
