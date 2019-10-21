@@ -1,41 +1,55 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Music Gallery</title>
-    </head>
-    <body>
-        <div class="user-input">
-            <form class="form">
-                <div class="user-input-form">
-                    <label for="name">Albulm Name</label>
-                    <input type="text" id="name" class="text-box">
-                </div>
-                <div class="user-input-form">
-                    <label for="artist">Artist Name</label>
-                    <input type="text" id="artist" class="text-box">
-                </div>
-                <div class="user-input-form">
-                    <label for="year">Year Released</label>
-                    <input type="text" id="year" class="text-box">
-                </div>
-                <div class="user-input-form">
-                    <label for="genre">Genre</label>
-                    <input type="text" id="genre" class="text-box">
-                </div>
-                <div class="user-input-form">
-                    <label for="link">Image Link</label>
-                    <input type="text" id="link" class="text-box">
-                </div>
-                <div class="user-input-form">
-                    <button id="submit">Submit</button>
-                </div>
-            </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Music Library</title>
+    <link rel="stylesheet" href="styles/css/main.css/main.css"
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+           <a href="#!">
+              <img class="brand-logo-image" src="images/svg/logo_music.svg"/>
+          </a>
+          <a href="#!" class="brand-logo">
+            Music Library
+          </a>
         </div>
-        <div class="display">
-
-        </div>
-        <script src="scripts/app.js"></script>
-    </body>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="display col s9">
+      </div>
+      <div class="card user-input col s2">
+        <form class="form">
+          <div class="user-input-form">
+            <label for="name">Albulm Name</label>
+            <input type="text" id="name" class="text-box" />
+          </div>
+          <div class="user-input-form">
+            <label for="artist">Artist Name</label>
+            <input type="text" id="artist" class="text-box" />
+          </div>
+          <div class="user-input-form">
+            <label for="year">Year Released</label>
+            <input type="text" id="year" class="text-box" />
+          </div>
+          <div class="user-input-form">
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" class="text-box" />
+          </div>
+          <div class="user-input-form">
+            <label for="link">Image Link</label>
+            <input type="text" id="link" class="text-box" />
+          </div>
+          <div class="user-input-form">
+            <button class="waves-effect waves-light btn" id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="display"></div>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>
