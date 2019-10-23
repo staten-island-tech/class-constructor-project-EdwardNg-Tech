@@ -45,3 +45,6 @@ button.remove-album {
   color: #b2dfdb;
   font-size: 16pt;
 }
+.sidenav {
+    width: 17.5vw;
+}
