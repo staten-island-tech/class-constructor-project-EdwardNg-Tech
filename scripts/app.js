@@ -7,7 +7,9 @@ class userInterface {
         <div class="col s4">
           <div class="card element">
              <div class="card-image">
-              <img src="${userInput.link}">
+              <img src="${
+                userInput.link
+              }" onerror="this.onerror=null;this.src='images/svg/disc.svg';">
              </div>
              <span class="card-title">${userInput.name}</span>
              <div class="card-content">
@@ -26,6 +28,16 @@ class userInterface {
   removeData(target) {
     if (target.id === "remove-album") {
       target.parentElement.parentElement.parentElement.parentElement.remove();
+    }
+    if (document.querySelector(".card") === null) {
+      document.querySelector(".main-row").insertAdjacentHTML(
+        "afterend",
+        `
+          <div class="initial col s12 center-align">
+            <img class="disc" src="images/svg/disc.svg" />
+            <p class="initial-text">To start, fill in the fields to the left to display information about a music album.</p>
+          </div>`
+      );
     }
   }
   removeFields() {
@@ -63,16 +75,27 @@ class eventListeners {
           userInput.genre === "" ||
           userInput.link === ""
         ) {
-          alert("Error: Please enter a value for every field.");
+          M.toast({
+            html: "Please enter a value for every field.",
+            displayLength: 4000,
+            classes: "rounded red"
+          });
           event.preventDefault();
         } else if (Number.isNaN(parseInt(userInput.year))) {
-          alert("Error: Please enter a number for the year field.");
+          M.toast({
+            html: "Please enter a number for the year field.",
+            displayLength: 4000,
+            classes: "rounded red"
+          });
           event.preventDefault();
         } else {
           let userDisplay = new userInterface();
           userDisplay.display(userInput);
           event.preventDefault();
           userDisplay.removeFields();
+          try {
+            document.querySelector(".initial").remove();
+          } catch (error) {}
         }
       });
   }

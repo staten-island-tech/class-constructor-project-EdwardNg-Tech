@@ -4,52 +4,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Music Library</title>
-    <link rel="stylesheet" href="styles/css/main.css/main.css"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
   <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-           <a href="#!">
-              <img class="brand-logo-image" src="images/svg/logo_music.svg"/>
-          </a>
-          <a href="#!" class="brand-logo">
-            Music Library
-          </a>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper">
+            <div class="row">
+              <div class="center">
+                <h1 class="header">Music Library</h1>
+            </div>
+          </div>
         </div>
       </nav>
-    </div>
-    <div class="row">
-      <div class="display col s9">
+      <ul class="sidenav sidenav-fixed">
+        <li>
+          <div class="user-view">
+            <a href="#!">
+              <img class="brand-logo" src="images/svg/logo_music.svg" />
+            </a>
+          </div>
+        </li>
+        <li><div class="divider"></div></li>
+        <li><p class="subheader">Add a Music Album</p></li>
+        <li>
+          <div class="user-input">
+            <form class="form">
+              <div class="user-input-form input-field">
+                <label for="name">Album Name</label>
+                <input type="text" id="name" class="text-box validate" />
+              </div>
+              <div class="user-input-form input-field">
+                <label for="artist">Artist Name</label>
+                <input type="text" id="artist" class="text-box" />
+              </div>
+              <div class="user-input-form input-field">
+                <label for="year">Year Released</label>
+                <input type="text" id="year" class="text-box" />
+              </div>
+              <div class="user-input-form input-field">
+                <label for="genre">Genre</label>
+                <input type="text" id="genre" class="text-box" />
+              </div>
+              <div class="user-input-form input-field">
+                <label for="link">Image Link</label>
+                <input type="text" id="link" class="text-box" />
+              </div>
+              <div class="user-input-form">
+                <button
+                  class="waves-effect waves-light btn center-align"
+                  id="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <div class="container">
+        <div class="main-row">
+          <div class="initial col s12 center-align">
+            <img class="disc" src="images/svg/disc.svg" />
+            <p class="initial-text">To start, fill in the fields to the left to display information about a music album.</p>
+          </div>
+          <div class="data display row">
+          </div>
+        </div>
       </div>
-      <div class="card user-input col s2">
-        <form class="form">
-          <div class="user-input-form">
-            <label for="name">Album Name</label>
-            <input type="text" id="name" class="text-box" />
-          </div>
-          <div class="user-input-form">
-            <label for="artist">Artist Name</label>
-            <input type="text" id="artist" class="text-box" />
-          </div>
-          <div class="user-input-form">
-            <label for="year">Year Released</label>
-            <input type="text" id="year" class="text-box" />
-          </div>
-          <div class="user-input-form">
-            <label for="genre">Genre</label>
-            <input type="text" id="genre" class="text-box" />
-          </div>
-          <div class="user-input-form">
-            <label for="link">Image Link</label>
-            <input type="text" id="link" class="text-box" />
-          </div>
-          <div class="user-input-form">
-            <button class="waves-effect waves-light btn" id="submit">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="display"></div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,47 @@
+.brand-logo {
+  padding-bottom: 30px;
+}
+.user-view {
+  margin: 0px 64px 0px 64px;
+  display: block;
+}
+.user-input {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.subheader {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+nav.top-nav {
+  height: 110px;
+  background-color: transparent;
+  width: 82.5vw;
+}
+nav.top-nav h1.header {
+  margin: 0;
+  padding-top: 22px;
+  color: #009688;
+}
+main {
+  padding-left: 300px;
+}
+header {
+  padding-left: 300px;
+}
+button.remove-album {
+  margin-top: 10px;
+}
+.card-title {
+  margin-left: 10px;
+}
+.disc {
+  height: 400px;
+  width: 400px;
+  padding-top: 50px;
+}
+
+.initial-text {
+  color: #b2dfdb;
+  font-size: 16pt;
+}
